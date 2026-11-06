@@ -1,0 +1,189 @@
+/* Whole page */
+* {
+  box-sizing: border-box;       
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222222;
+
+  background-color: #f1f5f1;            
+  background-image: url("Nutritionist & Naturopath Branding by KM Studio.jpg");   
+  background-size: cover;              
+  background-position: center;        
+  background-repeat: no-repeat;         
+  background-attachment: fixed;         
+}
+
+/* Navigation bar  */
+nav {
+  background-color: #717c3f;       
+  padding: 12px 24px;
+  display: flex;                   
+  gap: 20px;
+  align-items: center;
+}
+nav h1 {
+  color: white;
+  font-size: 20px;
+  margin: 0 auto 0 0;              
+}
+nav a {
+  color: white;
+  text-decoration: none;           
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+nav a:hover,
+nav a.active {                     
+  background-color: 		#a3968d;      
+}
+
+/* main area and white boxes  */
+main {
+  max-width: 1000px;
+  margin: 20px auto;               
+  padding: 0 16px;
+}
+section {
+  background-color: #faf7f2;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 18px;           
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+h2 {
+  margin-top: 0;
+  color: #2e7d32;
+  font-size: 18px;
+}
+
+/*  Forms: labels, inputs, dropdowns  */
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 8px 0 4px;
+}
+input,
+select {
+  padding: 8px;
+  border: 1px solid #aaaaaa;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.row {                             
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;                 
+  align-items: flex-end;
+}
+
+/*  Buttons */
+button {
+  background-color: #717c3f;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;                 
+  font-size: 14px;
+}
+button:hover {
+  background-color: #1b5e20;
+}
+button.danger {                    
+  background-color: #c62828;
+  margin-left: 6px;
+}
+button.grey {                     
+  background-color: #777777;
+}
+
+/*  Feedback messages */
+.msg {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.msg:empty {
+  display: none;                 
+}
+.ok   { background-color: #717c3f; }   
+.err  { background-color: #ffcdd2; }   
+.info { background-color: #e3f2fd; }   
+
+/* food results and meals */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  
+  gap: 12px;
+}
+.card {
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #cfc2b4;      
+}
+.card h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+.card p {
+  margin: 6px 0;
+  font-size: 13px;
+}
+.card small {
+  color: #555555;
+}
+.card img {                        
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+/*  Table  */
+table {
+  width: 100%;
+  border-collapse: collapse;    
+  font-size: 14px;
+}
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+th {
+  background-color: #e8f5e9;
+}
+
+/*  Calorie progress bar  */
+.bar {
+  background-color: #dddddd;
+  border-radius: 10px;
+  height: 16px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+.bar div {
+  background-color: #2e7d32;       
+  height: 100%;
+}
+
+/* 10. Extra styles  */
+hr {
+  border: none;
+  border-top: 1px solid #dddddd;
+  margin: 16px 0;
+}
+#detail {
+  margin-top: 14px;
+}
+.detail-box {
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 14px;
+  background-color: #fafafa;
+}

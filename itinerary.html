@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NutritionPlan - Food Diary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- navigation bar -->
+<nav>
+  <h1>NutritionPlan</h1>
+  <a href="index.html">Food Search</a>
+  <a class="active" href="itinerary.html">My Food Diary</a>
+</nav>
+
+<main>
+  <!--  Update a record -->
+  <section>
+    <h2 id="formTitle">Add food intake record</h2>
+    <div class="row">
+      <div><label>Food name</label><input id="name"></div>
+      <div>
+        <label>Meal</label>
+        <select id="meal">
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Snack</option>
+        </select>
+      </div>
+      <div><label>Servings</label><input id="servings" type="number" step="0.5" style="width:90px"></div>
+      <div><label>Calories (kcal)</label><input id="kcal" type="number" style="width:110px"></div>
+    </div>
+    <p>
+      <button id="saveBtn">Save record</button>
+      <button id="clearBtn" class="grey">Clear form</button>
+    </p>
+    <div id="formMsg" class="msg"></div>
+  </section>
+
+  <!-- Daily summary  -->
+  <section>
+    <h2>Daily summary</h2>
+    <label>Daily calorie goal (kcal)</label>
+    <input id="goal" type="number" style="width:120px">
+    <button id="goalBtn">Update goal</button>
+    <div id="summary"></div>
+  </section>
+
+  <!--saved records -->
+  <section>
+    <h2>Saved records</h2>
+    <div id="listMsg" class="msg"></div>
+    <table>
+      <thead>
+        <tr><th>Food</th><th>Meal</th><th>Servings</th><th>Calories (kcal)</th><th>Actions</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+</main>
+
+<script src="itinerary.js"></script>
+</body>
+</html>

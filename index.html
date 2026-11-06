@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NutritionPlan - Food Search</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- navigation bar -->
+<nav>
+  <h1>NutritionPlan</h1>
+  <a class="active" href="index.html">Food Search</a>
+  <a href="itinerary.html">My Food Diary</a>
+</nav>
+
+<main>
+  <!-- 1. Daily calories -->
+  <section>
+    <h2>1. My daily calories</h2>
+    <p>Enter your details to find out how many calories you need each day.</p>
+    <div class="row">
+      <div><label for="age">Age (18 or more)</label><input id="age" type="number" style="width:90px"></div>
+      <div><label for="sex">Sex</label>
+        <select id="sex"><option value="female">Female</option><option value="male">Male</option></select></div>
+      <div><label for="height">Height (cm)</label><input id="height" type="number" style="width:100px"></div>
+      <div><label for="weight">Weight (kg)</label><input id="weight" type="number" style="width:100px"></div>
+      <button id="calcBtn">Calculate</button>
+    </div>
+    <div id="calcMsg" class="msg"></div>
+    <div id="calcOut"></div>
+  </section>
+
+  <!-- 2. Search foods + nutrition details -->
+  <section>
+    <h2>2. Search food and nutrition</h2>
+    <p>Search by name (example: chicken, apple, soup) and/or choose a food group.</p>
+    <div class="row">
+      <div><label for="query">Food name</label><input id="query" size="22"></div>
+      <div><label for="foodGroup">Food group</label>
+        <select id="foodGroup">
+          <option value="">All groups</option>
+          <option value="fruits">Fruits</option>
+          <option value="vegetables">Vegetables</option>
+          <option value="grains">Grains</option>
+          <option value="protein-foods">Protein foods</option>
+          <option value="dairy">Dairy</option>
+        </select></div>
+      <button id="searchBtn">Search</button>
+    </div>
+    <div id="status" class="msg"></div>
+    <div id="results" class="grid"></div>
+
+    <!-- nutrition details appear here after clicking "View nutrition" -->
+    <div id="detailMsg" class="msg"></div>
+    <div id="detail"></div>
+  </section>
+
+  <!-- 3. Suggest foods by diet -->
+  <section>
+    <h2>3. Suggest foods for my diet</h2>
+    <p>Uses your diet and the calories you have left today (from your diary).</p>
+    <div class="row">
+      <div><label for="diet">Diet / requirement</label>
+        <select id="diet">
+          <option value="lowcal">Low calorie</option>
+          <option value="highprotein">High protein</option>
+          <option value="lowcarb">Low carb</option>
+          <option value="balanced">Balanced (3+ food groups)</option>
+        </select></div>
+      <div><label for="mealsLeft">Meals left today</label><input id="mealsLeft" type="number" value="2" min="1" max="4" style="width:90px"></div>
+      <button id="suggestBtn">Suggest foods</button>
+    </div>
+    <div id="sugMsg" class="msg"></div>
+    <div id="suggestions" class="grid"></div>
+  </section>
+</main>
+
+<script src="index.js"></script>
+</body>
+</html>
